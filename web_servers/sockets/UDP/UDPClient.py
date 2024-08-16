@@ -2,12 +2,13 @@ from socket import *
 
 
 def main():
+    # set server's IP address or hostname
     serverName = 'hostname'
     serverPort = 12000
 
     clientSocket = socket(AF_INET, SOCK_DGRAM)
 
-    message = input('Input lowercase sentence:')
+    message = input('Input lowercase sentence: ')
 
     clientSocket.sendto(message.encode(),(serverName, serverPort))
 
