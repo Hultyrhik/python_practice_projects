@@ -10,6 +10,7 @@ def main():
         message, clientAddress = serverSocket.recvfrom(2048)
         print("clientAddress: ", clientAddress)
         print("message: ", message)
+        print("message.decode(): ", message.decode())
         modifiedMessage = message.decode().upper()
         serverSocket.sendto(modifiedMessage.encode(),
         clientAddress)
